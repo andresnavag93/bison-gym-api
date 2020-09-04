@@ -17,7 +17,7 @@
     "server",
     "gym"
   ],
-  "author": "Wayu inc",
+  "author": "Andres Navarro",
   "license": "ISC",
   "dependencies": {
     "ajv": "^6.11.0",
