@@ -1,0 +1,677 @@
+{
+  "general": {
+    "unexpected": "Unexpected Error",
+    "imageUpload": "Problems uploading image, try again and remember that the size must be less than 1MB"
+  },
+  "attributes": {
+    "notFound": "There is no attribute with that id",
+    "fk": {
+      "attributeId": "There is no attributeId with that id"
+    },
+    "schema": {
+      "additionalProperties": "Has invalid attributes",
+      "properties": {
+        "name": {
+          "type": "must be string and max length = 50",
+          "maxLength": "must be string and max length = 50"
+        },
+        "value": {
+          "type": "must be string and max length = 100",
+          "maxLength": "must be string and max length = 100"
+        },
+        "attributeId": {
+          "type": "must be integer"
+        }
+      },
+      "required": {
+        "name": "is required"
+      }
+    }
+  },
+  "banks": {
+    "notFound": "There is no bank with that id",
+    "fk": {
+      "currencyId": "There is no currencyId with that id",
+      "gymId": "There is no gymId with that id",
+      "typeId": "There is no typeId with that id"
+    },
+    "schema": {
+      "additionalProperties": "Has invalid attributes",
+      "properties": {
+        "name": {
+          "type": "must be string and max length = 50",
+          "maxLength": "must be string and max length = 50"
+        },
+        "attributeId": {
+          "type": "must be integer"
+        },
+        "isActive": {
+          "type": "must be boolean"
+        },
+        "document": {
+          "type": "must be string and max length = 20",
+          "maxLength": "must be string and max length = 20"
+        },
+        "accountName": {
+          "type": "must be string and max length = 50",
+          "maxLength": "must be string and max length = 50"
+        },
+        "accountNumber": {
+          "type": "must be string and max length = 32",
+          "maxLength": "must be string and max length = 32"
+        },
+        "zelle": {
+          "type": "must be string and max length = 100",
+          "maxLength": "must be string and max length = 100"
+        }
+      },
+      "required": {
+        "name": "is required",
+        "currencyId": "is required",
+        "gymId": "is required",
+        "isActive": "is required"
+      }
+    }
+  },
+  "gyms": {
+    "schema": {
+      "additionalProperties": "Has invalid attributes",
+      "required": {
+        "name": "is required",
+        "email": "is required",
+        "phone1": "is required",
+        "latitude": "is required",
+        "longitud": "is required",
+        "reserveLimitNumber": "is required",
+        "penaltyDays": "is required",
+        "timezone": "is required",
+        "minDaysReserve": "is required",
+        "isActive": "is required"
+      },
+      "properties": {
+        "name": {
+          "type": "must be string and max length = 50",
+          "maxLength": "must be string and max length = 50"
+        },
+        "email": {
+          "type": "must be string, email format and max length = 100",
+          "maxLength": "must be string, email format and max length = 100",
+          "format": "must be string, email format and max length = 100"
+        },
+        "logo": {
+          "type": "must be string and max length = 100",
+          "maxLength": "must be string and max length = 100"
+        },
+        "description": {
+          "type": "must be string and max length = 250",
+          "maxLength": "must be string and max length = 250"
+        },
+        "phone1": {
+          "type": "must be string and max length = 20",
+          "maxLength": "must be string and max length = 20"
+        },
+        "latitude": {
+          "type": "must be number"
+        },
+        "longitude": {
+          "type": "must be number"
+        },
+        "preThankDays": {
+          "type": "must be integer"
+        },
+        "address": {
+          "type": "must be string and max length = 250",
+          "maxLength": "must be string and max length = 250"
+        },
+        "instagram": {
+          "type": "must be string and max length = 35",
+          "maxLength": "must be string and max length = 35"
+        },
+        "facebook": {
+          "type": "must be string and max length = 100",
+          "maxLength": "must be string and max length = 100"
+        },
+        "linkedin": {
+          "type": "must be string and max length = 100",
+          "maxLength": "must be string and max length = 100"
+        },
+        "minDaysReserve": {
+          "type": "must be integer"
+        },
+        "seasonStartDate": {
+          "type": "must be string and date-time format",
+          "maxLength": "must be string and date-time format",
+          "format": "must be string and date-time format"
+        },
+        "seasonEndDate": {
+          "type": "must be string and date-time format",
+          "maxLength": "must be string and date-time format",
+          "format": "must be string and date-time format"
+        },
+        "phone2": {
+          "type": "must be string and max length = 20",
+          "maxLength": "must be string and max length = 20"
+        },
+        "thankDays": {
+          "type": "must be integer"
+        },
+        "twitter": {
+          "type": "must be string and max length = 35",
+          "maxLength": "must be string and max length = 35"
+        },
+        "isActive": {
+          "type": "must be boolean"
+        },
+        "penaltyDays": {
+          "type": "must be integer"
+        }
+      }
+    },
+    "notFound": "There is no gym with that id",
+    "exceedLimit": "The gyms exceed limit for reserves",
+    "isDelete": "The gym is deleted",
+    "noActive": "The gym is inactive"
+  },
+  "users": {
+    "token": {
+      "unauthorized": "No authorized",
+      "expired": "Token expired"
+    },
+    "schema": {
+      "required": {
+        "name": "is required",
+        "lastname": "is required",
+        "document": "is required",
+        "email": "is required",
+        "picture": "is required",
+        "cellphone": "is required",
+        "password": "is required",
+        "birthday": "is required",
+        "anonymous": "is required"
+      },
+      "properties": {
+        "name": {
+          "type": "must be string and max length = 32",
+          "maxLength": "must be string and max length = 32"
+        },
+        "lastname": {
+          "type": "must be string and max length = 32",
+          "maxLength": "must be string and max length = 32"
+        },
+        "document": {
+          "type": "must be string and max length = 32",
+          "maxLength": "must be string and max length = 32"
+        },
+        "email": {
+          "type": "must be string, email format and max length = 100",
+          "maxLength": "must be string, email format and max length = 100",
+          "format": "must be string, email format and max length = 100"
+        },
+        "cellphone": {
+          "type": "must be string and max length = 20",
+          "maxLength": "must be string and max length = 20"
+        },
+        "password": {
+          "type": "must be string and max length = 50",
+          "maxLength": "must be string and max length = 50"
+        },
+        "birthday": {
+          "type": "must be string and date-time format",
+          "maxLength": "must be string and date-time format",
+          "format": "must be string and date-time format"
+        },
+        "anonymous": {
+          "type": "must be boolean"
+        },
+        "instagram": {
+          "type": "must be string and max length = 35",
+          "maxLength": "must be string and max length = 35"
+        },
+        "facebook": {
+          "type": "must be string and max length = 100",
+          "maxLength": "must be string and max length = 100"
+        },
+        "linkedin": {
+          "type": "must be string and max length = 100",
+          "maxLength": "must be string and max length = 100"
+        },
+        "twitter": {
+          "type": "must be string and max length = 35",
+          "maxLength": "must be string and max length = 35"
+        },
+        "picture": {
+          "type": "must be string and max length = 100",
+          "maxLength": "must be string and max length = 100"
+        },
+        "address": {
+          "type": "must be string and max length = 250",
+          "maxLength": "must be string and max length = 250"
+        }
+      }
+    },
+    "constrainst": {
+      "uniqueEmail": "The email is already taken, please try with another",
+      "uniqueGroupUserGym": "Problems creating the user, please communicate with bison admins"
+    },
+    "fk": {
+      "gymId": "There is no gymId with that id",
+      "groupId": "There is no groupId with that id",
+      "userId": "There is no userId with that id"
+    },
+    "notFound": "There is no user with that id",
+    "alreadyRated": "You already rate the gym",
+    "changeGroupId": "The change of roles is not allowed",
+    "penalized": "User penalized",
+    "emailNotFound": "Email not found",
+    "incorrectComparission": "Incorrect password",
+    "noActive": "Inactive user",
+    "isDelete": "Your user was delete of the system",
+    "notAuthorized": "User no authorized",
+    "password": {
+      "not-match": "Passwords doesn't match"
+    },
+    "incorrectBirthday": "Incorrect birthday",
+    "incorrectRole": "Only allow client o coach role"
+  },
+  "usersgroups": {
+    "schema": {
+      "required": {
+        "groupId": "is required",
+        "isActive": "is required"
+      },
+      "properties": {
+        "groupId": {
+          "type": "must be integer"
+        },
+        "isActive": {
+          "type": "must be boolean"
+        },
+        "gymId": {
+          "type": "Debe ser booleano"
+        }
+      }
+    }
+  },
+  "rooms": {
+    "notFound": "There is no room with that id",
+    "schema": {
+      "required": {
+        "capacity": "is required"
+      },
+      "properties": {
+        "name": {
+          "type": "must be string and max length = 50",
+          "maxLength": "must be string and max length = 50"
+        },
+        "capacity": {
+          "type": "must be integer"
+        }
+      }
+    },
+    "fk": {
+      "gymId": "There is no gymId with that id"
+    }
+  },
+  "penalties": {
+    "notFound": "There is no penalty with that id",
+    "penaltyDays": "The gym don't have penalty days"
+  },
+  "posts": {
+    "notFound": "There is no post with that id",
+    "fk": {
+      "currencyId": "There is no currencyId with that id",
+      "gymId": "There is no gymId with that id",
+      "typeId": "There is no typeId with that id"
+    }
+  },
+  "news": {
+    "schema": {
+      "required": {
+        "typeId": "is required",
+        "title": "is required",
+        "message": "is required"
+      },
+      "properties": {
+        "typeId": {
+          "type": "must be integer"
+        },
+        "title": {
+          "type": "must be string and max length = 50",
+          "maxLength": "must be string and max length = 50"
+        },
+        "message": {
+          "type": "must be string"
+        },
+        "id": {
+          "type": "must be integer"
+        }
+      }
+    }
+  },
+  "disciplines": {
+    "notFound": "There is no discipline with that id",
+    "schema": {
+      "required": {
+        "name": "is required",
+        "description": "is required",
+        "isActive": "is required"
+      },
+      "properties": {
+        "name": {
+          "type": "must be string and max length = 50",
+          "maxLength": "must be string and max length = 50"
+        },
+        "description": {
+          "type": "must be string"
+        },
+        "isActive": {
+          "type": "must be boolean"
+        },
+        "rating": {
+          "type": "must be number"
+        },
+        "serial": {
+          "maxLength": "must be string and max length = 32",
+          "type": "must be string and max length = 32"
+        }
+      }
+    }
+  },
+  "plans": {
+    "notFound": "There is no plan with that id",
+    "expired": "Your plan is expired",
+    "notActive": "You don't have any active plan",
+    "schema": {
+      "required": {
+        "currencyId": "is required",
+        "name": "is required",
+        "price": "is required",
+        "isActive": "is required",
+        "dayId": "is required",
+        "startHour": "is required",
+        "endHour": "is required"
+      },
+      "properties": {
+        "currencyId": {
+          "type": "must be integer"
+        },
+        "name": {
+          "type": "must be string and max length = 50",
+          "maxLength": "must be string and max length = 50"
+        },
+        "description": {
+          "type": "must be string"
+        },
+        "serial": {
+          "type": "must be string and max length = 32",
+          "maxLength": "must be string and max length = 32"
+        },
+        "price": {
+          "type": "must be string"
+        },
+        "isActive": {
+          "type": "must be number"
+        }
+      },
+      "type": "plans.schema.type"
+    },
+    "startDateGreater": "The start hour is greater equal than the end hour",
+    "fk": {
+      "currencyId": "There is no currencyId with that id"
+    },
+    "invalidHoursFormat": "Invalid hours format"
+  },
+  "classes": {
+    "notFound": "There is no classes with that id",
+    "withReserves": "Class with reserves, just can active o desactive it",
+    "existsHours": "The hours are busy",
+    "startDateGreater": "The start date is greater equal than the end date",
+    "coachNotfound": "The class cannot be create without a coach",
+    "classFinished": "is not available update finished classes or before one 1 hour of startDate",
+    "futureDate": "Cannot create classes with old dates",
+    "scheduleError": "Cannot create classes with old dates and The start date cannot be greater equal than the end date",
+    "scheduleNotFound": "Not schedule configuration for class creation",
+    "schema": {
+      "required": {
+        "disciplineId": "is required",
+        "startDate": "is required",
+        "endDate": "is required",
+        "isActive": "is required"
+      },
+      "properties": {
+        "disciplineId": {
+          "type": "must be integer"
+        },
+        "roomId": {
+          "type": "must be integer"
+        },
+        "startDate": {
+          "type": "must be string and date-time format",
+          "format": "must be string and date-time format"
+        },
+        "endDate": {
+          "type": "must be string and date-time format",
+          "format": "must be string and date-time format"
+        },
+        "price": {
+          "type": "must be string"
+        },
+        "capacity": {
+          "type": "must be integer"
+        },
+        "isActive": {
+          "type": "must be boolean"
+        },
+        "currencyId": {
+          "type": "must be integer"
+        },
+        "typeId": {
+          "type": "must be integer"
+        }
+      }
+    },
+    "fk": {
+      "currencyId": "There is no currencyId with that id",
+      "disciplineId": "There is no disciplineId with that id",
+      "typeId": "There is no typeId with that id",
+      "roomId": "There is no roomId with that id"
+    },
+    "inactive-class": {
+      "email-title": "The class was inactive",
+      "message": {
+        "1": "You were unsubcribed of class because the admin of your gym inactive it",
+        "2": "Class:",
+        "3": "Date:"
+      },
+      "accepted": "Accepted",
+      "rejected": "Rejected"
+    }
+  },
+  "payments": {
+    "notFound": "There is no payment with that id",
+    "notApprovedYet": "Your last payment has not been approved yet",
+    "alreadyChange": "Status payment has already changed",
+    "statusNotFound": "Status Id NotFound",
+    "statusError": "Incorrect status for update",
+    "lastPaymentNotExists": "Not approved payment existing, please communicate with admins",
+    "toEarlyToPay": "You need to wait your cutoff date for send a new payment",
+    "planNotFound": "Object plan is required",
+    "planIdNotFound": "planId is required",
+    "schema": {
+      "properties": {
+        "date": {
+          "type": "must be string and date time format",
+          "format": "must be string and date time format"
+        },
+        "bankId": {
+          "type": "must be integer"
+        },
+        "classId": {
+          "type": "must be integer"
+        },
+        "couponId": {
+          "type": "must be integer"
+        },
+        "userGroupId": {
+          "type": "must be integer"
+        },
+        "costumerId": {
+          "type": "must be string and max length  = 50",
+          "maxLength": "must be string and max length  = 50"
+        },
+        "statusId": {
+          "type": "must be integer"
+        },
+        "description": {
+          "type": "must be string"
+        },
+        "amount": {
+          "type": "must be string"
+        },
+        "referenceNumber": {
+          "type": "must be string and max length  = 30",
+          "maxLength": "must be string and max length  = 30"
+        },
+        "currencyId": {
+          "type": "must be integer"
+        }
+      },
+      "type": "Payment object is required",
+      "required": {
+        "statusId": "is required",
+        "date": "is required",
+        "amount": "is required"
+      }
+    },
+    "status-payment": {
+      "email-title": "Your payment has been processed",
+      "message": {
+        "1": "The administrator has processed your payment",
+        "2": "Emition date:",
+        "3": "Payment status:"
+      },
+      "accepted": "Accepted",
+      "rejected": "Rejected"
+    }
+  },
+  "reserves": {
+    "notFound": "There is no reserve with that id",
+    "reserved": "You already reserved this class",
+    "alreadyEliminated": "Your reserve is already eliminated",
+    "cannotEliminate": "is to late for cancel your reserve",
+    "lastPaymentNotExists": "Not approved payment existing, please communicate with admins",
+    "toEarlyToPay": "You need to wait your cutoff date for send a new payment",
+    "outOfYourPlan": "This class is out of your plan schedule",
+    "classDontBelongs": "This class is out of your plan",
+    "exceedCutDay": "The class date exceeds your court day",
+    "classisOver": "This class is over",
+    "classMinDaysReserve": "This class is too far and exceed minimum days for reserve",
+    "anotherClass": "You already have another active reserve in the same schedule",
+    "alreadyRate": "Already rated",
+    "cannotRateYet": "You need to wait for class to finish to rank it",
+    "suscribe": "Successfully suscribed to the class ",
+    "suscribeWaitingList": "Successfully suscribed to the waiting list class",
+    "suscribe-class": {
+      "email-title": "Subscription to class for waiting list",
+      "message": {
+        "1": "You have subscribed to this class because you are next on the waiting list. If you do not want to be part of this class, we invite you to cancel it manually",
+        "2": "Class:",
+        "3": "Date:"
+      },
+      "accepted": "Aceptado",
+      "rejected": "Rechazado"
+    }
+  },
+  "login": {
+    "schema": {
+      "properties": {
+        "email": {
+          "type": "must be string, email format and max length = 100",
+          "maxLength": "must be string, email format and max length = 100",
+          "format": "must be string, email format and max length = 100"
+        },
+        "password": {
+          "type": "must be string and max length = 20",
+          "maxLength": "must be string and max length = 20"
+        }
+      },
+      "required": {
+        "email": "is required",
+        "password": "is required"
+      }
+    }
+  },
+  "auth": {
+    "unexpected": "Unexpected Error",
+    "password-recovery": {
+      "code": {
+        "invalid": "Invalid o expired code",
+        "email-title": "Recovery password code",
+        "message": {
+          "1": "Security code:"
+        }
+      }
+    },
+    "new-register": {
+      "email-title": "Welcome to Bison Gym",
+      "message": {
+        "1": "User:",
+        "2": "Password:"
+      }
+    }
+  },
+  "verifyCode": {
+    "schema": {
+      "required": {
+        "serial": "is required"
+      },
+      "properties": {
+        "serial": {
+          "type": "must be integer"
+        }
+      }
+    }
+  },
+  "resetPassword": {
+    "schema": {
+      "required": {
+        "serial": "is required",
+        "password": "is required",
+        "confirmPassword": "is required"
+      },
+      "properties": {
+        "serial": {
+          "type": "must be integer"
+        },
+        "password": {
+          "type": "must be string"
+        },
+        "confirmPassword": {
+          "type": "must be string"
+        }
+      }
+    }
+  },
+  "hours": {
+    "schema": {
+      "properties": {
+        "dayId": {
+          "type": "must be integer"
+        },
+        "startHour": {
+          "type": "must be string and date time format",
+          "format": "must be string and date time format"
+        },
+        "endHour": {
+          "type": "must be string and date time format",
+          "format": "must be string and date time format"
+        }
+      },
+      "required": {
+        "endHour": "is required",
+        "dayId": "is required",
+        "startHour": "is required"
+      }
+    }
+  }
+}

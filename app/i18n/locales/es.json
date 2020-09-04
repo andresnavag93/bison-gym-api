@@ -1,0 +1,677 @@
+{
+  "general": {
+    "unexpected": "Error inesperado",
+    "imageUpload": "Problemas al cargar la imagen, intente nuevamente y recuerde que el tamaño debe ser inferior a 1 MB"
+  },
+  "attributes": {
+    "notFound": "No existe un attribute con ese id",
+    "fk": {
+      "attributeId": "No existe un attributeId con ese id"
+    },
+    "schema": {
+      "additionalProperties": "Tiene atributos inválidos",
+      "properties": {
+        "name": {
+          "type": "debe ser un string y longitud máxima  = 50",
+          "maxLength": "debe ser un string y longitud máxima  = 50"
+        },
+        "value": {
+          "type": "debe ser un string y longitud máxima  = 100",
+          "maxLength": "debe ser un string y longitud máxima  = 100"
+        },
+        "attributeId": {
+          "type": "debe ser número entero"
+        }
+      },
+      "required": {
+        "name": "es requerido"
+      }
+    }
+  },
+  "banks": {
+    "notFound": "No existe un bank con ese id",
+    "fk": {
+      "currencyId": "No existe un currencyId con ese id",
+      "gymId": "No existe un gymId con ese id",
+      "typeId": "No existe un typeId con ese id"
+    },
+    "schema": {
+      "additionalProperties": "Tiene atributos inválidos",
+      "properties": {
+        "name": {
+          "type": "debe ser un string y longitud máxima  = 50",
+          "maxLength": "debe ser un string y longitud máxima  = 50"
+        },
+        "attributeId": {
+          "type": "debe ser número entero"
+        },
+        "isActive": {
+          "type": "debe ser booleano"
+        },
+        "document": {
+          "type": "debe ser un string y longitud máxima  = 20",
+          "maxLength": "debe ser un string y longitud máxima  = 20"
+        },
+        "accountName": {
+          "type": "debe ser un string y longitud máxima  = 50",
+          "maxLength": "debe ser un string y longitud máxima  = 50"
+        },
+        "accountNumber": {
+          "type": "debe ser un string y longitud máxima  = 32",
+          "maxLength": "debe ser un string y longitud máxima  = 32"
+        },
+        "zelle": {
+          "type": "debe ser un string y longitud máxima  = 100",
+          "maxLength": "debe ser un string y longitud máxima  = 100"
+        }
+      },
+      "required": {
+        "name": "es requerido",
+        "currencyId": "es requerido",
+        "gymId": "es requerido",
+        "isActive": "es requerido"
+      }
+    }
+  },
+  "gyms": {
+    "schema": {
+      "additionalProperties": "Tiene atributos inválidos",
+      "required": {
+        "name": "es requerido",
+        "email": "es requerido",
+        "phone1": "es requerido",
+        "latitude": "es requerido",
+        "longitud": "es requerido",
+        "reserveLimitNumber": "es requerido",
+        "penaltyDays": "es requerido",
+        "timezone": "es requerido",
+        "minDaysReserve": "es requerido",
+        "isActive": "es requerido"
+      },
+      "properties": {
+        "name": {
+          "type": "debe ser un string y longitud máxima  = 50",
+          "maxLength": "debe ser un string y longitud máxima  = 50"
+        },
+        "email": {
+          "type": "debe ser string, formato correo y longitud máxima = 100",
+          "maxLength": "debe ser string, formato correo y longitud máxima = 100",
+          "format": "debe ser string, formato correo y longitud máxima = 100"
+        },
+        "logo": {
+          "type": "debe ser un string y longitud máxima  = 100",
+          "maxLength": "debe ser un string y longitud máxima  = 100"
+        },
+        "description": {
+          "type": "debe ser un string y longitud máxima  = 250",
+          "maxLength": "debe ser un string y longitud máxima  = 250"
+        },
+        "phone1": {
+          "type": "debe ser un string y longitud máxima  = 20",
+          "maxLength": "debe ser un string y longitud máxima  = 20"
+        },
+        "latitude": {
+          "type": "debe ser númerico"
+        },
+        "longitude": {
+          "type": "debe ser númerico"
+        },
+        "preThankDays": {
+          "type": "debe ser número entero"
+        },
+        "address": {
+          "type": "debe ser un string y longitud máxima  = 250",
+          "maxLength": "debe ser un string y longitud máxima  = 250"
+        },
+        "instagram": {
+          "type": "debe ser un string y longitud máxima  = 35",
+          "maxLength": "debe ser un string y longitud máxima  = 35"
+        },
+        "facebook": {
+          "type": "debe ser un string y longitud máxima  = 100",
+          "maxLength": "debe ser un string y longitud máxima  = 100"
+        },
+        "linkedin": {
+          "type": "debe ser un string y longitud máxima  = 100",
+          "maxLength": "debe ser un string y longitud máxima  = 100"
+        },
+        "minDaysReserve": {
+          "type": "debe ser número entero"
+        },
+        "seasonStartDate": {
+          "type": "debe ser string y en formato fecha y hora",
+          "maxLength": "debe ser string y en formato fecha y hora",
+          "format": "debe ser string y en formato fecha y hora"
+        },
+        "seasonEndDate": {
+          "type": "debe ser string y en formato fecha y hora",
+          "maxLength": "debe ser string y en formato fecha y hora",
+          "format": "debe ser string y en formato fecha y hora"
+        },
+        "phone2": {
+          "type": "debe ser un string y longitud máxima  = 20",
+          "maxLength": "debe ser un string y longitud máxima  = 20"
+        },
+        "thankDays": {
+          "type": "debe ser número entero"
+        },
+        "twitter": {
+          "type": "debe ser un string y longitud máxima  = 35",
+          "maxLength": "debe ser un string y longitud máxima  = 35"
+        },
+        "isActive": {
+          "type": "debe ser booleano"
+        },
+        "penaltyDays": {
+          "type": "debe ser número entero"
+        }
+      }
+    },
+    "notFound": "No existe un gym con ese id",
+    "exceedLimit": "El gimnasio ha excedido su número de reservas",
+    "isDelete": "El gimnasio fue eliminado del sistema",
+    "noActive": "El gimnasio se encuentra inactivo"
+  },
+  "users": {
+    "token": {
+      "unauthorized": "No autorizado",
+      "expired": "Token expirado"
+    },
+    "schema": {
+      "required": {
+        "name": "es requerido",
+        "lastname": "es requerido",
+        "document": "es requerido",
+        "email": "es requerido",
+        "picture": "es requerido",
+        "cellphone": "es requerido",
+        "password": "es requerido",
+        "birthday": "es requerido",
+        "anonymous": "es requerido"
+      },
+      "properties": {
+        "name": {
+          "type": "debe ser un string y longitud máxima  = 32",
+          "maxLength": "debe ser un string y longitud máxima  = 32"
+        },
+        "lastname": {
+          "type": "debe ser un string y longitud máxima  = 32",
+          "maxLength": "debe ser un string y longitud máxima  = 32"
+        },
+        "document": {
+          "type": "debe ser un string y longitud máxima  = 32",
+          "maxLength": "debe ser un string y longitud máxima  = 32"
+        },
+        "email": {
+          "type": "debe ser string, formato correo y longitud máxima = 100",
+          "maxLength": "debe ser string, formato correo y longitud máxima = 100",
+          "format": "debe ser string, formato correo y longitud máxima = 100"
+        },
+        "cellphone": {
+          "type": "debe ser un string y longitud máxima  = 20",
+          "maxLength": "debe ser un string y longitud máxima  = 20"
+        },
+        "password": {
+          "type": "debe ser un string y longitud máxima  = 50",
+          "maxLength": "debe ser un string y longitud máxima  = 50"
+        },
+        "birthday": {
+          "type": "debe ser string y en formato fecha y hora",
+          "maxLength": "debe ser string y en formato fecha y hora",
+          "format": "debe ser string y en formato fecha y hora"
+        },
+        "anonymous": {
+          "type": "debe ser booleano"
+        },
+        "instagram": {
+          "type": "debe ser un string y longitud máxima  = 35",
+          "maxLength": "debe ser un string y longitud máxima  = 35"
+        },
+        "facebook": {
+          "type": "debe ser un string y longitud máxima  = 100",
+          "maxLength": "debe ser un string y longitud máxima  = 100"
+        },
+        "linkedin": {
+          "type": "debe ser un string y longitud máxima  = 100",
+          "maxLength": "debe ser un string y longitud máxima  = 100"
+        },
+        "twitter": {
+          "type": "debe ser un string y longitud máxima  = 35",
+          "maxLength": "debe ser un string y longitud máxima  = 35"
+        },
+        "picture": {
+          "type": "debe ser un string y longitud máxima  = 100",
+          "maxLength": "debe ser un string y longitud máxima  = 100"
+        },
+        "address": {
+          "type": "debe ser un string y longitud máxima  = 250",
+          "maxLength": "debe ser un string y longitud máxima  = 250"
+        }
+      }
+    },
+    "constrainst": {
+      "uniqueEmail": "El correo electrónico ya está en uso, intente con otro",
+      "uniqueGroupUserGym": "Problemas para crear el usuario, comuníquese con los administradores de bison"
+    },
+    "fk": {
+      "gymId": "No existe un gymId con ese id",
+      "groupId": "No existe un groupId con ese id",
+      "userId": "No existe un userId con ese id"
+    },
+    "notFound": "No existe un user con ese id",
+    "alreadyRated": "Ya has punteado el gimnasio",
+    "changeGroupId": "No se permite el cambio de roles",
+    "penalized": "Usuario penalizado",
+    "emailNotFound": "Correo no encontrado",
+    "incorrectComparission": "Clave inválida",
+    "noActive": "Usuario inactivo",
+    "isDelete": "Usuario eliminado del sistema",
+    "notAuthorized": "Usuario no autorizado",
+    "password": {
+      "not-match": "Las contraseñas no coinciden"
+    },
+    "incorrectBirthday": "Fecha de nacimiento incorrecta",
+    "incorrectRole": "Solo role de cliente o coach permitido"
+  },
+  "usersgroups": {
+    "schema": {
+      "required": {
+        "groupId": "es requerido",
+        "isActive": "es requerido"
+      },
+      "properties": {
+        "groupId": {
+          "type": "debe ser número entero"
+        },
+        "isActive": {
+          "type": "debe ser booleano"
+        },
+        "gymId": {
+          "type": "debe ser booleano"
+        }
+      }
+    }
+  },
+  "rooms": {
+    "notFound": "No existe un room con ese id",
+    "schema": {
+      "required": {
+        "capacity": "es requerido"
+      },
+      "properties": {
+        "name": {
+          "type": "debe ser un string y longitud máxima  = 50",
+          "maxLength": "debe ser un string y longitud máxima  = 50"
+        },
+        "capacity": {
+          "type": "debe ser número entero"
+        }
+      }
+    },
+    "fk": {
+      "gymId": "No existe un gymId con ese id"
+    }
+  },
+  "penalties": {
+    "notFound": "No existe un penalty con ese id",
+    "penaltyDays": "El gimnasio no tiene días de penalización"
+  },
+  "posts": {
+    "notFound": "No existe un post con ese id",
+    "fk": {
+      "currencyId": "No existe un currencyId con ese id",
+      "gymId": "No existe un gymId con ese id",
+      "typeId": "No existe un typeId con ese id"
+    }
+  },
+  "news": {
+    "schema": {
+      "required": {
+        "typeId": "es requerido",
+        "title": "es requerido",
+        "message": "es requerido"
+      },
+      "properties": {
+        "typeId": {
+          "type": "debe ser número entero"
+        },
+        "title": {
+          "type": "debe ser un string y longitud máxima  = 50",
+          "maxLength": "debe ser un string y longitud máxima  = 50"
+        },
+        "message": {
+          "type": "debe ser string"
+        },
+        "id": {
+          "type": "Must be integer"
+        }
+      }
+    }
+  },
+  "disciplines": {
+    "notFound": "No existe un discipline con ese id",
+    "schema": {
+      "required": {
+        "name": "es requerido",
+        "description": "es requerido",
+        "isActive": "es requerido"
+      },
+      "properties": {
+        "name": {
+          "type": "debe ser un string y longitud máxima  = 50",
+          "maxLength": "debe ser un string y longitud máxima  = 50"
+        },
+        "description": {
+          "type": "debe ser string"
+        },
+        "isActive": {
+          "type": "debe ser booleano"
+        },
+        "rating": {
+          "type": "debe ser númerico"
+        },
+        "serial": {
+          "maxLength": "debe ser un string y longitud máxima  = 32",
+          "type": "debe ser un string y longitud máxima  = 32"
+        }
+      }
+    }
+  },
+  "plans": {
+    "notFound": "No existe un plan con ese id",
+    "expired": "Su plan ha expirado",
+    "notActive": "No tienes ningún plan activo",
+    "schema": {
+      "required": {
+        "currencyId": "es requerido",
+        "name": "es requerido",
+        "price": "es requerido",
+        "isActive": "es requerido",
+        "dayId": "es requerido",
+        "startHour": "es requerido",
+        "endHour": "es requerido"
+      },
+      "properties": {
+        "currencyId": {
+          "type": "debe ser número entero"
+        },
+        "name": {
+          "type": "debe ser un string y longitud máxima  = 50",
+          "maxLength": "debe ser un string y longitud máxima  = 50"
+        },
+        "description": {
+          "type": "debe ser string"
+        },
+        "serial": {
+          "type": "debe ser un string y longitud máxima  = 32",
+          "maxLength": "debe ser un string y longitud máxima  = 32"
+        },
+        "price": {
+          "type": "debe ser string"
+        },
+        "isActive": {
+          "type": "debe ser númerico"
+        }
+      },
+      "type": "plans.schema.type"
+    },
+    "startDateGreater": "La hora de inicio es mayor o igual que la hora de culminación",
+    "fk": {
+      "currencyId": "No existe un currencyId con ese id"
+    },
+    "invalidHoursFormat": "Formato de horas incorrecto"
+  },
+  "classes": {
+    "notFound": "No existe un clase con ese id",
+    "withReserves": "Clase con reservaciones, solo puedes activarla o desactivarla",
+    "existsHours": "Las horas están ocupadas",
+    "startDateGreater": "La fecha de inicio es mayor o igual que la fecha de culminación",
+    "coachNotfound": "La clase no se puede crear sin un entrenador",
+    "classFinished": "No está disponible actualizar las clases terminadas o antes de una hora de su fecha de inicio",
+    "futureDate": "No puedes crear clases con fechas viejas",
+    "scheduleError": "No puedes crear clases con fechas viejas y La fecha de inicio no puede ser mayor o igual que la fecha de culminación",
+    "scheduleNotFound": "No has configurado los horarios para la creación de clases",
+    "schema": {
+      "required": {
+        "disciplineId": "es requerido",
+        "startDate": "es requerido",
+        "endDate": "es requerido",
+        "isActive": "es requerido"
+      },
+      "properties": {
+        "disciplineId": {
+          "type": "debe ser número entero"
+        },
+        "roomId": {
+          "type": "debe ser número entero"
+        },
+        "startDate": {
+          "type": "debe ser string y en formato fecha y hora",
+          "format": "debe ser string y en formato fecha y hora"
+        },
+        "endDate": {
+          "type": "debe ser string y en formato fecha y hora",
+          "format": "debe ser string y en formato fecha y hora"
+        },
+        "price": {
+          "type": "debe ser string"
+        },
+        "capacity": {
+          "type": "debe ser número entero"
+        },
+        "isActive": {
+          "type": "debe ser booleano"
+        },
+        "currencyId": {
+          "type": "debe ser número entero"
+        },
+        "typeId": {
+          "type": "debe ser número entero"
+        }
+      }
+    },
+    "fk": {
+      "currencyId": "No existe un currencyId con ese id",
+      "disciplineId": "No existe un disciplineId con ese id",
+      "typeId": "No existe un typeId con ese id",
+      "roomId": "No existe un roomId con ese id"
+    },
+    "inactive-class": {
+      "email-title": "La clase ha sido desactivada",
+      "message": {
+        "1": "Fuiste unsubscrito de la clase porque el administrador de tu gimnasio la ha desactivado",
+        "2": "Clase:",
+        "3": "Fecha:"
+      },
+      "accepted": "Aceptado",
+      "rejected": "Rechazado"
+    }
+  },
+  "payments": {
+    "notFound": "No existe un payment con ese id",
+    "notApprovedYet": "Tu último pago no ha sido aprobado todavía",
+    "alreadyChange": "El status del pago ya ha sido modificado",
+    "statusNotFound": "StatusId no encontrado",
+    "statusError": "Status incorrecto para actualización",
+    "lastPaymentNotExists": "Pago aprobado no existente, comuníquese con los administradores",
+    "toEarlyToPay": "Debe esperar su día de corte para enviar un nuevo pago",
+    "planNotFound": "El objeto plan es requerido",
+    "planIdNotFound": "planId es requerido",
+    "schema": {
+      "properties": {
+        "date": {
+          "type": "debe ser string y en formato fecha y hora",
+          "format": "debe ser string y en formato fecha y hora"
+        },
+        "bankId": {
+          "type": "debe ser entero"
+        },
+        "classId": {
+          "type": "debe ser entero"
+        },
+        "couponId": {
+          "type": "debe ser entero"
+        },
+        "userGroupId": {
+          "type": "debe ser entero"
+        },
+        "costumerId": {
+          "type": "debe ser un string y longitud máxima  = 50",
+          "maxLength": "debe ser un string y longitud máxima  = 50"
+        },
+        "statusId": {
+          "type": "debe ser entero"
+        },
+        "description": {
+          "type": "debe ser string"
+        },
+        "amount": {
+          "type": "debe ser string"
+        },
+        "referenceNumber": {
+          "type": "debe ser un string y longitud máxima  = 30",
+          "maxLength": "debe ser un string y longitud máxima  = 30"
+        },
+        "currencyId": {
+          "type": "debe ser entero"
+        }
+      },
+      "type": "es necesario pasar el objeto payment",
+      "required": {
+        "statusId": "es requerido",
+        "date": "es requerido",
+        "amount": "es requerido"
+      }
+    },
+    "status-payment": {
+      "email-title": "Tu pago ha sido procesado",
+      "message": {
+        "1": "Tu pago ha sido procesado por el administrador",
+        "2": "Fecha de emisión:",
+        "3": "Estado del pago:"
+      },
+      "accepted": "Aceptado",
+      "rejected": "Rechazado"
+    }
+  },
+  "reserves": {
+    "notFound": "No existe una reserva con ese id",
+    "reserved": "Ya tienes reservada esta clase",
+    "alreadyEliminated": "Tu reserva ya está eliminada",
+    "cannotEliminate": "es tarde para cancelar su reserva",
+    "lastPaymentNotExists": "Pago aprobado no existente, comuníquese con los administradores",
+    "toEarlyToPay": "Debe esperar su día de corte para enviar un nuevo pago",
+    "outOfYourPlan": "esta clase está fuera del horario de su plan",
+    "classDontBelongs": "esta clase está fuera de tu plan",
+    "exceedCutDay": "La fecha de clase excede tu día de corte",
+    "classIsOver": "Clase terminada",
+    "classMinDaysReserve": "esta clase está demasiado lejos y excede los días mínimos de reserva",
+    "anotherClass": "Ya tienes otra reserva activa en el mismo horario",
+    "alreadyRate": "Ya calificado",
+    "cannotRateYet": "Necesitas esperar que la clase termine para la puntear",
+    "suscribe": "Te has suscrito a la clase satisfactoriamente",
+    "suscribeWaitingList": "Te has suscrito en la lista de espera de la clase satisfactoriamente",
+    "suscribe-class": {
+      "email-title": "Subscripción a clase por lista de espera",
+      "message": {
+        "1": "Te has subscrito a esta clase porque eres el siguiente en la lista de espera. Si no deseas formar parte, te invitamos a cancelarla manualmente",
+        "2": "Clase:",
+        "3": "Fecha:"
+      },
+      "accepted": "Aceptado",
+      "rejected": "Rechazado"
+    }
+  },
+  "login": {
+    "schema": {
+      "properties": {
+        "email": {
+          "type": "debe ser string, formato correo y longitud máxima = 100",
+          "maxLength": "debe ser string, formato correo y longitud máxima = 100",
+          "format": "debe ser string, formato correo y longitud máxima = 100"
+        },
+        "password": {
+          "type": "debe ser un string y longitud máxima  = 20",
+          "maxLength": "debe ser un string y longitud máxima  = 20"
+        }
+      },
+      "required": {
+        "email": "es requerido",
+        "password": "es requerido"
+      }
+    }
+  },
+  "auth": {
+    "unexpected": "Error inesperado",
+    "password-recovery": {
+      "code": {
+        "invalid": "Código inválido o expirado",
+        "email-title": "Código para recuperar contraseña",
+        "message": {
+          "1": "Código de seguridad:"
+        }
+      }
+    },
+    "new-register": {
+      "email-title": "Bienvenido a Bison Gym",
+      "message": {
+        "1": "Usuario:",
+        "2": "Contraseña:"
+      }
+    }
+  },
+  "verifyCode": {
+    "schema": {
+      "required": {
+        "serial": "es requerido"
+      },
+      "properties": {
+        "serial": {
+          "type": "debe ser entero"
+        }
+      }
+    }
+  },
+  "resetPassword": {
+    "schema": {
+      "required": {
+        "serial": "es requerido",
+        "password": "es requerido",
+        "confirmPassword": "es requerido"
+      },
+      "properties": {
+        "serial": {
+          "type": "debe ser entero"
+        },
+        "password": {
+          "type": "debe ser string"
+        },
+        "confirmPassword": {
+          "type": "debe ser string"
+        }
+      }
+    }
+  },
+  "hours": {
+    "schema": {
+      "properties": {
+        "dayId": {
+          "type": "debe ser entero"
+        },
+        "startHour": {
+          "type": "debe ser string y en formato fecha y hora",
+          "format": "debe ser string y en formato fecha y hora"
+        },
+        "endHour": {
+          "type": "debe ser string y en formato fecha y hora",
+          "format": "debe ser string y en formato fecha y hora"
+        }
+      },
+      "required": {
+        "endHour": "es requerido",
+        "dayId": "es requerido",
+        "startHour": "es requerido"
+      }
+    }
+  }
+}
